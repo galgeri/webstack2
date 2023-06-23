@@ -6,7 +6,7 @@ ARG WWWUSER=1000
 ARG WWWGROUP=1000
 
 # Install tools and setup www-data user ID
-RUN apk add -U shadow
+RUN apk add -U shadow openssh-client
 RUN usermod -u $WWWUSER www-data
 RUN groupmod -g $WWWGROUP www-data
 
@@ -17,6 +17,8 @@ RUN chmod +x /usr/local/bin/dep
 # Install composer
 COPY composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
+
+RUN docker-php-ext-install pdo_mysql
 
 # Set custom php.ini
 COPY conf.d/php.ini /usr/local/etc/php/conf.d/php.ini
