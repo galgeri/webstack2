@@ -18,8 +18,8 @@ services:
 
   ws2-php:
     build:
-      context: ./docker/php82
-    container_name: php82-ws2
+      context: ./docker/php
+    container_name: php-ws2
     depends_on:
       - ws2-mariadb
     volumes:

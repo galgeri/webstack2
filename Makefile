@@ -19,7 +19,7 @@ npm-run-watch
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
 
-PHP_CONTAINER="php82-ws2"
+PHP_CONTAINER="php-ws2"
 MARIADB_CONTAINER="mariadb-ws2"
 NODE_CONTAINER="node:18-alpine3.18"
 
