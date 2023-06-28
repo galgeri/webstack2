@@ -32,8 +32,6 @@ __Recommended tools:__
 
   - GNU make utility
 
-  - tee (used in a Makefile target)
-
 ## Setup
 
 To set up the environment, you have two options.
