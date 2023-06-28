@@ -64,7 +64,7 @@ stop: ## Stop docker containers
 
 purge-db-volume: ## Remove all volume data
 	sudo rm -rf docker/volumes/*
-	echo "*" | tee docker/volumes/.gitignore
+	echo "*" > docker/volumes/.gitignore
 
 shell-php: ## Open shell prompt in the PHP container
 	docker exec -it --user=$(USER_ID):$(GROUP_ID) -w /www $(PHP_CONTAINER) sh
